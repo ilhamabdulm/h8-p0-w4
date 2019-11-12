@@ -1,16 +1,14 @@
 function tukarBesarKecil(kalimat) {
     // you can only write your code here!
-    var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789/.,%$#@!&*-_=;{}'
-    var lower = 'abcdefghijklmnopqrstuvwxyz'
     var result = ''
     
     for(var i=0; i<kalimat.length; i++){
-        for(var j=0; j<upper.length; j++){
-            if(kalimat[i]===upper[j]){
-                result += kalimat[i].toLowerCase()
-            }else if(kalimat[i]===lower[j]){
-                result += kalimat[i].toUpperCase()
-            }
+        if(kalimat[i]===kalimat[i].toUpperCase()){
+            result+=kalimat[i].toLowerCase()
+        }else if(kalimat[i]===kalimat[i].toLowerCase()){
+            result+=kalimat[i].toUpperCase()
+        }else{
+            result+=kalimat[i]
         }
     }
     return result
